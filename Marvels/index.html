@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Супергерои Марвел</title>
+    <link rel="icon" href=""
+        type="png/svg">
+    <style>
+        body, #rating {
+            background-color:lavender;
+        }
+        .titel {
+            color: rgb(71, 71, 134);
+            text-align: center;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: 10% 70% 10%;
+            align-items: center;
+            text-align: start;
+            justify-content: center;
+        }
+        
+        .item {
+            height: 900px;
+            width: 1200px;
+        }
+
+        .image, .rating {
+            text-align: left;
+            justify-self: left;
+        }
+        
+        #image {
+            height: 300px;
+        }
+
+        .next {
+            justify-self: center;
+        }
+
+        #error {
+            color: red;
+        }
+        #yourRating {
+            color: green;
+        }
+
+        #rating {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="titel">Супергерои Марвел</h2>
+    <div class="container">
+    <div class="gallery">
+            <a class="previous" onclick="changeMeLeft()">&#10094;</a>
+            <div class="item">
+                <p id="description"></p>
+                <input type="number" max=5 min=1 id="rating" placeholder="Оценка супергероя от 1 до 5" required>
+                <div><button id="button" onclick="send()";>Сохранить</button></div>
+                <div id="error"></div>
+                <div id="yourRating"></div>
+            </div>
+            <a class="next" onclick="changeMeRight()">&#10095;</a>
+    </div>
+    </div>
+
+<script src="./index.js"></script>
+</body>
+
+</html>
