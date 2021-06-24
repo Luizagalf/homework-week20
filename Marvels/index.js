@@ -96,13 +96,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     for (let heroe of heroes) {
         heroesContent.push(`<div class='heroe'>
-        <div>${heroe.name}</div><br>
+        <h2 align="center">${heroe.name}</h2>
         <div>Вселенная: ${heroe.fact1}</div>
         <div>Альтер эго: ${heroe.fact2}</div>
         <div>Род деятельности: ${heroe.fact3}</div>
         <div>Друзья: ${heroe.fact4}</div>
         <div>Суперсилы: ${heroe.fact5}</div><br>
-        <img src="${heroe.img}"><br>
+        <div align="center"><img src="${heroe.img}"></div><br>
         <div>Подробнее: ${heroe.description}</div>
         </div>`);
     }

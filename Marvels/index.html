@@ -19,6 +19,8 @@
         .gallery {
             display: grid;
             grid-template-columns: 10% 70% 10%;
+            position: relative;
+            align-self: center;
             align-items: center;
             text-align: start;
             justify-content: center;
@@ -26,20 +28,20 @@
         
         .item {
             height: 900px;
-            width: 1200px;
         }
 
-        .image, .rating {
-            text-align: left;
-            justify-self: left;
-        }
-        
-        #image {
-            height: 300px;
+        .rating {
+            text-align: center;
         }
 
         .next {
-            justify-self: center;
+            justify-self: flex-end;
+        }
+
+        .next, .previous {
+        font-size: 100px;
+        cursor: pointer;
+        color: rgb(71, 71, 134);
         }
 
         #error {
@@ -50,22 +52,24 @@
         }
 
         #rating {
-            width: 300px;
+            width: 200px;
         }
     </style>
 </head>
 
 <body>
-    <h2 class="titel">Супергерои Марвел</h2>
+    <h1 class="titel">Супергерои Марвел</h1>
     <div class="container">
     <div class="gallery">
             <a class="previous" onclick="changeMeLeft()">&#10094;</a>
             <div class="item">
                 <p id="description"></p>
-                <input type="number" max=5 min=1 id="rating" placeholder="Оценка супергероя от 1 до 5" required>
-                <div><button id="button" onclick="send()";>Сохранить</button></div>
-                <div id="error"></div>
-                <div id="yourRating"></div>
+                <div class="rating">
+                    <input type="number" max=5 min=1 id="rating" placeholder="Оценка супергероя от 1 до 5" required>
+                    <button id="button" onclick="send()";>Сохранить</button>
+                    <div id="error"></div>
+                    <div id="yourRating"></div>
+                </div>
             </div>
             <a class="next" onclick="changeMeRight()">&#10095;</a>
     </div>
